@@ -1,6 +1,5 @@
-import  java.util.Scanner;
 public class Problem1 {
-    public static void main(String[] args) {
+    public static void main() {
         int[] arr = {10,32,7,3,5};
         int min = findMin(arr,arr.length);
         System.out.println("Min from arr is:"+ min +" " + arr.length);

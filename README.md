@@ -1,35 +1,92 @@
-Project Name
-Brief description of what this project does.
+# Assignemt1 
+###  by Muratbek Meirzhan
 
-Problems
-This project contains 10 problems, each of which is implemented as a separate class. Here is a brief summary of each problem:
 
-Problem 1
-Description of problem 1 and what it solves.
+---
 
-Problem 2
-Description of problem 2 and what it solves.
 
-Problem 3
-Description of problem 3 and what it solves.
+# Main 🗿 [Link](src/Main.java)
 
-Problem 4
-Description of problem 4 and what it solves.
+The Main class is created to call each class by using Scanner and methods (switch-case)
 
-Problem 5
-Description of problem 5 and what it solves.
+```import  java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        switch (n) {
+            case 1:
+                Problem1.main();
+                break;
+            case 2:
+                Problem2.main(); {
+            }
+            break;
+            case 3:
+                Problem3.main(args);
+                break;
+            case 4:
+                Problem4.main(args);
+                break;
+            case 5:
+                Problem5.main(args);
+                break;
+            case 6:
+                Problem6.main(args);
+                break;
+            case 7:
+                Problem7.main(args);
+                break;
+        }
 
-Problem 6
-Description of problem 6 and what it solves.
+    }
+    }
+   ```   
 
-Problem 7
-Description of problem 7 and what it solves.
 
-Problem 8
-Description of problem 8 and what it solves.
+---
 
-Problem 9
-Description of problem 9 and what it solves.
 
-Problem 10
-Description of problem 10 and what it solves.
+# Problem:one: [Link](src/Problem1.java)
+Description: This function returns minimum value of the array by using recursive function
+
+Explanation:
+
+1. The main method initializes an integer array arr with five values.
+
+2. it then calls the findMin method with two arguments: arr and the length of the array (arr.length).
+
+3. The findMin method is a recursive function that takes an array and its length as arguments.
+
+4. If the length of the array is 1, the method returns the only element in the array as the minimum value.
+
+5. Otherwise, it recursively calls itself with the array and its length minus one and stores the returned minimum value in the min variable.
+
+6. Finally, it returns the minimum value between min and the last element in the array (arr[n-1]) using the Math.min method.
+ 
+7. The main method prints the minimum value found by the findMin method.
+
+
+```
+public class Problem1 {
+    public static void main() {
+        int[] arr = {10,32,7,3,5};
+        int min = findMin(arr,arr.length);
+        System.out.println("Min from arr is:"+ min +" " + arr.length);
+    }
+    public static int findMin(int[] arr, int n){
+        if(n==1)
+            return arr[0];
+        else{
+            int min = findMin(arr,n-1);
+            return Math.min(min, arr[n-1]);
+        }
+    }
+}
+
+```
+
+
+---
+
+
